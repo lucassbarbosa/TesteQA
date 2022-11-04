@@ -1,6 +1,6 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-import ModalPage from '../pageobjects/ModalPage'
+import ModalPage from './modalpage'
 const modalPage = new ModalPage
 
 Given("o usuário acessa a página de tutorial de modal box", () => {

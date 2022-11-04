@@ -1,5 +1,5 @@
 class ModalElements {
-    botaoOpenModal = () => { return 'button .ws-btn .w3-dark-grey' }
+    botao = () => { return cy.contains("Open Modal") }
     infoModal = () => { return '#id01' }
 }
 

@@ -1,16 +1,12 @@
 {
-  "devDependencies": {
-    "cypress": "^10.11.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/webpack-preprocessor": "latest",
+    "cypress": "latest",
+    "webpack": "latest"
   },
   "scripts": {
-    "test:chrome": "cypress run --browser chrome --no-exit",
-    "cypress:open": "cypress open"
-  },
-  "cypress-cucumber-preprocessor": {
-    "step_definitions": "cypress/support/steps"
-  },
-  "dependencies": {
-    "tsify": "^5.0.4"
+    "test:chrome": "cypress run --browser chrome",
+    "test:watch": "cypress run --browser chrome --headed --no-exit"  
   }
 }
