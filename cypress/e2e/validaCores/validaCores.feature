@@ -1,8 +1,8 @@
 Feature: validaCores.feature
 
    Scenario: validar tabela de cores
-      Given eu acesso a página de tabela de cores
-      When eu encontro a cor "<Cor>"
+      Given que vou acessar a página de tabela de cores
+      When encontrar a cor "<Cor>"
       Then o hexadecial deve ser igual a "<Hexa>"
 
       Examples:
