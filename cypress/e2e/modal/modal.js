@@ -1,16 +1,20 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-import ModalPage from './modalpage'
-const modalPage = new ModalPage
-
 Given("o usuário acessa a página de tutorial de modal box", () => {
-    modalPage.acessarSite();
+    /* Acessar a pagina "https://w3schools.com/howto/howto_css_modals.asp" */
+    const url = Cypress.config("baseUrl")
+    cy.visit(url + "howto/howto_css_modals.asp")
 })
 
 When("o usuário clica no botão open-modal", () => {
-    modalPage.abrirModal();
+    /* Encontrar o botão "Open Modal" e clicar */
+    cy.contains("Open Modal").click()
 })
 
 Then("deve ser exibido uma janela", () => {
-    modalPage.visualizarModal();
+    /* Verificar se a modal está visivel */
+    cy.get("#id01").then($modal => {
+        return $modal.is(':visible')
+    })
+    .should ('equal', true)
 })
