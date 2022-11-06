@@ -36,7 +36,7 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: "**/modal/*.feature",
+    specPattern: "**/*.feature",
     supportFile: false,
     baseUrl: "https://www.w3schools.com/",
     defaultCommandTimeout: 10000,
