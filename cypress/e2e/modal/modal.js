@@ -1,5 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
+//Cenário 01 - openModal.feature
+
 Given("ao acessar a página de tutorial de modal box", () => {
     /* Acessar a pagina "https://w3schools.com/howto/howto_css_modals.asp" */
     const url = Cypress.config("baseUrl")
@@ -16,5 +18,5 @@ Then("deve ser exibido uma janela Open Modal", () => {
     cy.get("#id01").then($modal => {
         return $modal.is(':visible')
     })
-    .should ('equal', true)
+        .should('equal', true)
 })
